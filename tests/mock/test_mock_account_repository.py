@@ -8,7 +8,7 @@ def test_store_sets_the_account_number_to_an_integer(account_repository):
     account = Account(customer_id='12345', account_status='active')
     account_repository.store(account)
 
-    assert type(account.account_number) is int
+    assert isinstance(account.account_number, int)
 
 
 def test_store_generates_a_new_account_number_each_time(account_repository):

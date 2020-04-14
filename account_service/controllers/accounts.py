@@ -71,4 +71,4 @@ class ContentTypeError(RuntimeError):
 @accounts.errorhandler(ContentTypeError)
 def content_type_error(e):
     return jsonify(message='Request must be application/json'), \
-           HTTPStatus.UNSUPPORTED_MEDIA_TYPE
+        HTTPStatus.UNSUPPORTED_MEDIA_TYPE
